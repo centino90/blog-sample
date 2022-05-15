@@ -1,0 +1,71 @@
+.main {
+  &__section {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+
+    &__heading {
+      font-size: 4rem;
+      font-weight: bolder;
+    }
+
+    picture {
+      overflow: hidden;
+      width: 700px;
+      height: 400px;
+    }
+    img {
+      object-fit: cover;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+
+      &__item {
+        padding: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-style: italic;
+      }
+
+      details {
+        margin: 1rem 0;
+      }
+    }
+
+    &--vertical {
+      flex-direction: column;
+      &__heading {
+        font-size: 2rem;
+      }
+      &__card {
+        margin-top: 1rem;
+        display: flex;
+        gap: 2rem;
+        position: relative;
+        overflow: hidden;
+        padding: 1rem 5rem;
+        background-image: linear-gradient(
+          to left,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.3)
+        );
+        color: #fff;
+        img {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
+        }
+        h4 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
